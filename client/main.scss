@@ -3,3 +3,6 @@ $primary-color: color("indigo", "darken-2");
 @import "{poetic:materialize-scss}/sass/materialize.scss";
 @import "./stylesheets/_stickyfooter.scss";
 
+.full-w {
+  width: 100%;
+}
