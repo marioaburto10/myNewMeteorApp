@@ -1,4 +1,3 @@
-
 import { Meteor } from 'meteor/meteor';
 import { BrowserPolicy } from 'meteor/browser-policy-common';
 
@@ -13,4 +12,8 @@ Meteor.startup(() => {
   if (Meteor.users.findOne(Meteor.settings.adminId)){
     Roles.addUsersToRoles(Meteor.settings.adminId, ['admin']);
   }
+});
+
+Meteor.publish("posts", function () {
+  return Posts.find();
 });
